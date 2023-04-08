@@ -1,0 +1,44 @@
+<div class="tools"
+     *ngIf="displayConfig.search || displayConfig.plus || displayConfig.photo || displayConfig.selectedLabel">
+    <wii-icon *ngIf="displayConfig.search"
+              name="search.svg"
+              color="primary"
+              class="tools-icon"
+              (action)="onSearchClick()">
+    </wii-icon>
+    <wii-icon *ngIf="displayConfig.plus"
+              name="plus.svg"
+              color="primary"
+              class="tools-icon"
+              (action)="onPenClick()">
+    </wii-icon>
+
+    <wii-icon *ngIf="displayConfig.photo"
+              name="scan-photo.svg"
+              color="primary"
+              class="tools-icon"
+              (action)="scan()">
+    </wii-icon>
+
+    <ng-container *ngIf="displayConfig.selectedLabel && selectedLabel$">
+        <div class="tools-selected-label ion-activatable ripple-parent"
+             (click)="onSelectedLabelClick()"
+             *ngIf="selectedLabel$ | async as selectedLabelValue">
+            <span class="selected-label-content">{{ selectedLabelValue }}</span>
+            <span class="selected-label-remove">&times;</span>
+            <ion-ripple-effect></ion-ripple-effect>
+        </div>
+    </ng-container>
+</div>
+
+<div class="input-manual"
+           *ngIf="displayConfig.input">
+    <ion-item>
+        <ion-input type="text" placeholder="Entrée manuelle..." [(ngModel)]="input"></ion-input>
+        <wii-icon name="plus.svg"
+                  color="success"
+                  class="plus-icon"
+                  (action)="addManually()">
+        </wii-icon>
+    </ion-item>
+</div>

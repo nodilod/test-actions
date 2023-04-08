@@ -1,0 +1,19 @@
+@import "theme/variables";
+
+:host {
+    .add-signature {
+        width: 30px;
+        height: 30px;
+    }
+
+    .signature-image {
+        width: 30%;
+    }
+
+    .signature-image-container {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}

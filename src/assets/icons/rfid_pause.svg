@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <style>
+            .svg-rfid-pause-cls-1 {
+                fill: #030f4b;
+            }
+        </style>
+    </defs>
+    <g>
+        <g data-name="Tracé 89">
+            <path class="svg-rfid-pause-cls-1 svg-fill"
+                  d="m29.73,98.55c-4.42,0-8-3.58-8-8V9.45c0-4.42,3.58-8,8-8s8,3.58,8,8v81.1c0,4.42-3.58,8-8,8Z"/>
+        </g>
+    </g>
+    <path class="svg-rfid-pause-cls-1 svg-fill"
+          d="m70.27,98.55c-4.42,0-8-3.58-8-8V9.45c0-4.42,3.58-8,8-8s8,3.58,8,8v81.1c0,4.42-3.58,8-8,8Z"/>
+</svg>

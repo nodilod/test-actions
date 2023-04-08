@@ -1,0 +1,18 @@
+<wii-search-item #searchComponent
+                 [type]="type"
+                 [requestParams]="requestParams"
+                 (itemChange)="onItemSelect($event)"
+                 hidden>
+</wii-search-item>
+<div class="select-location-footer">
+    <wii-barcode-scanner #barcodeScanner
+                         [selectedLabel$]="selectedLabel$"
+                         [mode]="scanMode"
+                         (search)="openSearch()"
+                         (createForm)="onPenClick()"
+                         (manualAdd)="testIfBarcodeValid($event)"
+                         (scanAdd)="testIfBarcodeValid($event)"
+                         (cameraAdd)="testIfBarcodeValid($event)"
+                         (clear)="onItemSelect(undefined)">
+    </wii-barcode-scanner>
+</div>

@@ -1,0 +1,16 @@
+<wii-panel-header *ngIf="panelHeaderConfig"
+                  class="page-header"
+                  [transparent]="panelHeaderConfig.transparent"
+                  [title]="panelHeaderConfig.title">
+</wii-panel-header>
+
+<div class="page-footer persisted-page-footer">
+    <wii-barcode-scanner #footerScannerComponent
+                         [mode]="scannerMode"
+                         (manualAdd)="selectLocation($event)"
+                         (cameraAdd)="selectLocation($event)"
+                         (scanAdd)="selectLocation($event)">
+    </wii-barcode-scanner>
+</div>
+
+

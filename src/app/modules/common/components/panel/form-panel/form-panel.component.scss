@@ -1,0 +1,54 @@
+@import "theme/variables";
+
+:host {
+    display: flex;
+    overflow-y: auto;
+
+    & > .wrapper {
+        flex: 1;
+
+        & > wii-panel-header {
+            margin: $spacerMin $spacerMin $spacerMin calc(#{$spacerMin}/2);
+        }
+
+        & > .list-wrapper {
+            &:not(.is-form) > ::ng-deep * {
+                margin-right: $spacer;
+                margin-left: $spacer;
+            }
+
+            & > ::ng-deep * {
+                display: block;
+                margin-right: 0.25rem;
+                margin-left: calc(0.25rem / 2);
+
+                &:not(:last-child) {
+                    margin-bottom: $spacerMin;
+                }
+            }
+            .add-multiple-occurrence {
+                text-align: center;
+            }
+        }
+    }
+
+    .bold-title {
+        font-weight: bold;
+        font-size: $normalFontSize;
+        margin-top: $spacer;
+        margin-left: 1.25rem !important;
+
+        p {
+            margin: 0;
+        }
+
+        wii-icon {
+            margin-right: 5px;
+        }
+    }
+
+    .inline-flex {
+        display: inline-flex !important;
+        margin-top: 0 !important;
+    }
+}
