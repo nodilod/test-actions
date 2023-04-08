@@ -19,3 +19,8 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: 13.x
+                
+            - name: Install Ionic CLI
+              run: yarn global add @ionic/cli
+                
+                
